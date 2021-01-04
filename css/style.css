@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, white 48px, #7796FF 1px);
+  background-size: 100% 50px;
+}
+
+body::before {
+  content: '';
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 60px;
+  height: 100%;
+  width: 1px;
+  background: #db4034;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 5px;
+  margin-left: 60px;
+  margin-bottom: 42px;
+}
+
+#list-name {
+  font-family: 'Just Another Hand', sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  margin-top: 7px;
+}
+
+.total-price {
+  margin-top: auto;
+  margin-bottom: 7px;
+  font-size: 18px;
+  color: #818181;
+}
+
+.fa-trash-alt {
+  pointer-events: all;
+  padding: 10px 24px 10px 14px;
+  color: #E1535C;
+}
+
+.item {
+  padding-left: 5px;
+  font-size: 24px;
+  height: 50px;
+  display: flex;
+  cursor: pointer;
+}
+
+.item-description {
+  pointer-events: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.item-qtde {
+  pointer-events: none;
+  align-self: center;
+}
+
+.item-price {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  margin-top: 30px;
+  padding-right: 5px;
+  font-size: 18px;
+  color: #818181;
+}
+
+#add-new-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 65px;
+  font-size: 24px;
+  color: #818181;
+  cursor: pointer;
+}
+
+.fa-plus-square {
+  padding-left: 8px;
+  font-size: 28px;
+  color: #5A944F;
+}
+
+#modal-add,
+#modal-edit {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+#modal-add input[type='text'],
+#modal-edit input[type='text'] {
+  padding-left: 2px;
+}
+
+.modal-content {
+  background-color: #FBFBFB;
+  width: 260px;
+  height: 260px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-75%);
+}
+
+.modal-content label {
+  color: #474747;
+}
+
+.modal-content input {
+  height: 30px;
+  width: 181px;
+  font-size: 1.2rem;
+  border: 1px solid #a1a1a1;
+  border-radius: 3px;
+}
+
+#modal-add .modal-content button {
+  display: block;
+  height: 30px;
+  width: 90px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 3px;
+  background-color: #5A944F;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#modal-add .modal-content button:hover {
+  background-color: #528549;
+  cursor: pointer;
+}
+
+#modal-edit .modal-content button {
+  display: block;
+  height: 30px;
+  width: 90px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 3px;
+  background-color: #547AFC;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#modal-edit .modal-content button:hover {
+  background-color: #3c6aff;
+  cursor: pointer;
+}
+
+.close-btn img {
+  height: 40px;
+  position: absolute;
+  z-index: 1;
+  right: -3%;
+  top: -4%;
+  cursor: pointer;
+}

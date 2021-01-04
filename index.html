@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Shopping List</title>
+</head>
+<body>
+  <header>
+    <h1 id="list-name">Shopping List</h1>
+    <span class="total-price">Total: R$ 0,00</span>
+  </header>
+  <section id="items">
+  </section>
+  <div id="add-new-item">
+    <p>Adicionar novo item </p>
+    <i class="fas fa-plus-square"></i>
+  </div>
+  <div id="modal-add">
+    <div class="modal-content">
+        <div class="close-btn">
+          <img src="img/close+icon-1320184117228553763_0.svg" alt="close button">
+        </div>
+        <table>
+            <tr>
+                <td><label for="item">Item:</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="item" class="add-item"></td>
+            </tr>
+            <tr>
+                <td><label for="price">Preço R$:</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="price" class="add-price"></td>
+            </tr>
+            <tr>
+                <td><label for="qtde">Quantidade:</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="qtde" class="add-qtde"><br></td>
+            </tr>
+            <tr>
+                <td><button class="add-to-list">Adicionar</button></td>
+            </tr>
+        </table>
+    </div>
+  </div>
+
+  <div id="modal-edit">
+    <div class="modal-content">
+        <div class="close-btn">
+          <img src="img/close+icon-1320184117228553763_0.svg" alt="close button">
+        </div>
+        <table>
+            <tr>
+                <td><label for="item">Item:</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="item" class="edit-item"></td>
+            </tr>
+            <tr>
+                <td><label for="price">Preço R$:</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="price" class="edit-price"></td>
+            </tr>
+            <tr>
+                <td><label for="qtde">Quantidade:</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="qtde" class="edit-qtde"><br></td>
+            </tr>
+            <tr>
+                <td><button class="save-list">Salvar</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
